@@ -1,6 +1,7 @@
 ---
 permalink: /
 title: "Felipe Ribeiro"
+excerpt: "Postdoctoral Fellow, Sam Nunn School of International Affairs, Georgia Tech"
 author_profile: true
 header:
   overlay_image: "15173419375a70ccf12b487_1517341937_3x2_rt.jpg"
