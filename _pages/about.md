@@ -3,10 +3,8 @@ permalink: /
 title: "Felipe Ribeiro"
 author_profile: true
 header:
-  image: "images/15173419375a70ccf12b487_1517341937_3x2_rt.jpg"
+  image: "15173419375a70ccf12b487_1517341937_3x2_rt.jpg"
 redirect_from: 
-  - /about/
-  - /about.html
 ---
 
 I am a Postdoctoral Fellow at the Sam Nunn School of International Affairs, Georgia Institute of Technology. My research examines organized crime governance, state capacity, and political violence in Latin America, with Brazil as my primary empirical site. I use panel data, spatial econometrics, and causal inference to study how criminal organizations govern territory and how state infrastructure and security policy interact to produce (or prevent) violence.
