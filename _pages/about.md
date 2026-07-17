@@ -3,7 +3,7 @@ permalink: /
 title: "Felipe Ribeiro"
 author_profile: true
 header:
-  image: "/images/15173419375a70ccf12b487_1517341937_3x2_rt.jpg"
+  image: "images/15173419375a70ccf12b487_1517341937_3x2_rt.jpg"
 redirect_from: 
   - /about/
   - /about.html
