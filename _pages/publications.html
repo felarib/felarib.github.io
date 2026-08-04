@@ -6,31 +6,73 @@ author_profile: true
 ---
 
 {% if site.author.googlescholar %}
-  <div class="wordwrap">You can also find my articles on <a href="{{site.author.googlescholar}}">my Google Scholar profile</a>.</div>
+  <div class="wordwrap">You can also find my articles on <a href="{{ site.author.googlescholar }}">my Google Scholar profile</a>.</div>
 {% endif %}
 
 {% include base_path %}
 
-<!-- New style rendering if publication categories are defined -->
-{% if site.publication_category %}
-  {% for category in site.publication_category  %}
-    {% assign title_shown = false %}
-    {% for post in site.publications reversed %}
-      {% if post.category != category[0] %}
-        {% continue %}
-      {% endif %}
-      {% unless title_shown %}
-        <h2>{{ category[1].title }}</h2><hr />
-        {% assign title_shown = true %}
-      {% endunless %}
-      {% include archive-single.html %}
-    {% endfor %}
-  {% endfor %}
-{% else %}
+{% comment %} Build a delimited list of valid category keys, used below to catch strays. {% endcomment %}
+{% assign valid_categories = "|" %}
+{% for category in site.publication_category %}
+  {% assign valid_categories = valid_categories | append: category[0] | append: "|" %}
+{% endfor %}
+
+{% for category in site.publication_category %}
+  {% assign title_shown = false %}
   {% for post in site.publications reversed %}
-    {% include archive-single.html %}
+    {% if post.category != category[0] %}{% continue %}{% endif %}
+
+    {% unless title_shown %}
+      <h2>{{ category[1].title }}</h2><hr />
+      {% assign title_shown = true %}
+    {% endunless %}
+
+    <div class="list__item">
+      <article class="archive__item">
+        <h3 class="archive__item-title">
+          <a href="{{ base_path }}{{ post.url }}">{{ post.title }}</a>
+        </h3>
+
+        {% if post.status %}
+          <p>{{ post.status }}{% if post.venue %}, <i>{{ post.venue }}</i>{% endif %}</p>
+        {% elsif post.venue %}
+          <p>Published in <i>{{ post.venue }}</i>, {{ post.date | default: "1900-01-01" | date: "%Y" }}</p>
+        {% endif %}
+
+        {% if post.excerpt %}
+          <p class="archive__item-excerpt">{{ post.excerpt | markdownify }}</p>
+        {% endif %}
+
+        {% if post.citation %}
+          <p class="archive__item-excerpt">
+            {% if post.status %}Cite as:{% else %}Recommended citation:{% endif %} {{ post.citation }}
+          </p>
+        {% endif %}
+
+        {% if post.paperurl %}
+          <p><a href="{{ post.paperurl }}">Download paper</a></p>
+        {% endif %}
+      </article>
+    </div>
   {% endfor %}
-{% endif %}
+{% endfor %}
 
-
-
+{% comment %} Catch-all: anything whose category matches no key would otherwise vanish silently. {% endcomment %}
+{% assign stray_shown = false %}
+{% for post in site.publications reversed %}
+  {% assign key = "|" | append: post.category | append: "|" %}
+  {% unless valid_categories contains key %}
+    {% unless stray_shown %}
+      <h2>Other</h2><hr />
+      {% assign stray_shown = true %}
+    {% endunless %}
+    <div class="list__item">
+      <article class="archive__item">
+        <h3 class="archive__item-title">
+          <a href="{{ base_path }}{{ post.url }}">{{ post.title }}</a>
+        </h3>
+        {% if post.venue %}<p><i>{{ post.venue }}</i></p>{% endif %}
+      </article>
+    </div>
+  {% endunless %}
+{% endfor %}
