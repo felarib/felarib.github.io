@@ -39,6 +39,10 @@ author_profile: true
           <p>Published in <i>{{ post.venue }}</i>, {{ post.date | default: "1900-01-01" | date: "%Y" }}</p>
         {% endif %}
 
+        {% if post.presented %}
+        <p class="archive__item-excerpt"><em>Presented at {{ post.presented }}.</em></p>
+        {% endif %}
+
         {% if post.excerpt %}
           <p class="archive__item-excerpt">{{ post.excerpt | markdownify }}</p>
         {% endif %}
