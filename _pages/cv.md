@@ -11,7 +11,6 @@ redirect_from:
 
 <p><em>Download the full CV: <a href="/files/CV.pdf">PDF</a></em></p> 
 Education
-======
 * Ph.D. in Political Science, Temple University, 2025
 * M.A in Political Science, Temple University, 2025
 * M.A in International Relations, Universidade Federal de Uberlândia, 2019
