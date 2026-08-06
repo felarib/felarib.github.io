@@ -9,12 +9,13 @@ redirect_from:
 
 {% include base_path %}
 
-<p><em>Download the full CV: <a href="/files/CV.pdf">PDF</a> (TODO: upload your CV PDF to the <code>files/</code> folder and update this link)</em></p>
-
+<p><em>Download the full CV: <a href="/files/CV.pdf">PDF</a></em></p> 
 Education
 ======
 * Ph.D. in Political Science, Temple University, 2025
-* (add your prior degrees here — institution, degree, year)
+* M.A in Political Science, Temple University, 2025
+* M.A in International Relations, Universidade Federal de Uberlândia, 2019
+* B.A in International Relations, Universidade Federal de Uberlândia, 2016
 
 Appointments
 ======
@@ -23,7 +24,7 @@ Appointments
 
 Research interests
 ======
-Organized crime governance, state capacity, and political violence in Latin America (Brazil primary empirical site). Methods: panel data, spatial econometrics, causal inference.
+Organized crime governance, economic development, state capacity, and political violence in Latin America. Methods: fieldwork, process-tracing, panel data, spatial econometrics, causal inference.
 
 Publications
 ======
