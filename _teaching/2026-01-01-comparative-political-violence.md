@@ -9,3 +9,6 @@ location: "Atlanta, GA"
 ---
 
 A mixed undergraduate/graduate course examining the comparative study of political violence, including organized crime, civil conflict, and state repression.
+
+- Surveys major theoretical approaches to political violence — i.e., organized crime governance, civil conflict, and state repression.
+- Graduate students complete additional readings and a research component alongside the shared undergraduate seminar
