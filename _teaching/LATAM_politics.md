@@ -8,4 +8,4 @@ date: 2024-08-01
 location: "Saint Paul, MN"
 ---
 
-A survey of political institutions, regime trajectories, and state-society relations across Latin America.
+A survey of political institutions, regime trajectories, and state-society relations across Latin America (Fall 2024).
